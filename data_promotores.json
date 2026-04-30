@@ -1,0 +1,1627 @@
+{
+  "meta": {
+    "evento": "EVT-CORREGIDORA",
+    "fecha": "28 de abril de 2026",
+    "lugar": "Puerta de San Rafael",
+    "generado": "28 de abril de 2026"
+  },
+  "resumen": {
+    "total_invitados": 183,
+    "total_asistentes": 121,
+    "no_asistieron": 62,
+    "efectividad_global": 66.1,
+    "total_lideres": 14,
+    "tickets_entregados": 121
+  },
+  "por_hora": [
+    {
+      "franja": "4:00 PM - 4:59 PM",
+      "asistentes": 44,
+      "pct": 36.4
+    },
+    {
+      "franja": "5:00 PM - 5:59 PM",
+      "asistentes": 70,
+      "pct": 57.9
+    },
+    {
+      "franja": "6:00 PM - 6:59 PM",
+      "asistentes": 7,
+      "pct": 5.8
+    }
+  ],
+  "lideres": [
+    {
+      "ranking": 1,
+      "nombre": "FRANCISCA TAMAYO MEDRANO",
+      "invitados": 2,
+      "asistieron": 2,
+      "no_asistieron": 0,
+      "efectividad": 100.0,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 2,
+      "nombre": "ANAHI RIVERA PEREZ",
+      "invitados": 51,
+      "asistieron": 50,
+      "no_asistieron": 1,
+      "efectividad": 98.0,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 3,
+      "nombre": "BEATRIZ MORENO TRUJILLO",
+      "invitados": 9,
+      "asistieron": 8,
+      "no_asistieron": 1,
+      "efectividad": 88.9,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 4,
+      "nombre": "DULCE BERENICE GARCIA GOMEZ",
+      "invitados": 9,
+      "asistieron": 8,
+      "no_asistieron": 1,
+      "efectividad": 88.9,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 5,
+      "nombre": "TERESA ORTEGA PEREZ",
+      "invitados": 5,
+      "asistieron": 4,
+      "no_asistieron": 1,
+      "efectividad": 80.0,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 6,
+      "nombre": "ROSA OLVERA MENDOZA",
+      "invitados": 24,
+      "asistieron": 15,
+      "no_asistieron": 9,
+      "efectividad": 62.5,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 7,
+      "nombre": "ERIKA ZUÑIGA RIVERA",
+      "invitados": 28,
+      "asistieron": 16,
+      "no_asistieron": 12,
+      "efectividad": 57.1,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 8,
+      "nombre": "ROBERTO PEREZ CENTERO",
+      "invitados": 9,
+      "asistieron": 5,
+      "no_asistieron": 4,
+      "efectividad": 55.6,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 9,
+      "nombre": "GUSTAVO CRUZ F.",
+      "invitados": 18,
+      "asistieron": 9,
+      "no_asistieron": 9,
+      "efectividad": 50.0,
+      "estado": "Cumplió"
+    },
+    {
+      "ranking": 10,
+      "nombre": "NALLELY RAMIREZ DIAZ",
+      "invitados": 11,
+      "asistieron": 4,
+      "no_asistieron": 7,
+      "efectividad": 36.4,
+      "estado": "Bajó"
+    },
+    {
+      "ranking": 11,
+      "nombre": "FERNANDA GODOY RODRIGUEZ",
+      "invitados": 1,
+      "asistieron": 0,
+      "no_asistieron": 1,
+      "efectividad": 0.0,
+      "estado": "Bajó"
+    },
+    {
+      "ranking": 12,
+      "nombre": "LUZ MARIA MONROY SUAREZ",
+      "invitados": 1,
+      "asistieron": 0,
+      "no_asistieron": 1,
+      "efectividad": 0.0,
+      "estado": "Bajó"
+    },
+    {
+      "ranking": 13,
+      "nombre": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "invitados": 10,
+      "asistieron": 0,
+      "no_asistieron": 10,
+      "efectividad": 0.0,
+      "estado": "Bajó"
+    },
+    {
+      "ranking": 14,
+      "nombre": "NADIA BREÑA SANCHEZ",
+      "invitados": 5,
+      "asistieron": 0,
+      "no_asistieron": 5,
+      "efectividad": 0.0,
+      "estado": "Bajó"
+    }
+  ],
+  "ciudadanos": [
+    {
+      "nombre": "MA. FLORINA BOCANEGRA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:01 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "GLORIA BOCANEGRA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:01 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "LOURDES BOCANEGRA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:01 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA DEL CARMEN BOCANEGRA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:01 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARCELO BOCANEGRQ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:01 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA JUANA CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:01 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. DEL CARMEN CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "CATALINA CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE CARLOS CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ALEJANDRA CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARINA CRUZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "DIEGO ARMANDO DOMINGUEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JUANA DOMINGUEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ERIK GARCIA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "NATALI ABIGAIL GARCIA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JUAN PABLO GARCIA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MEDARDO GOMEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "VIRGINIA GOMEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA FELIX GONZALEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:04 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ANDREA GUILLEN",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:05 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "HECTOR MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:05 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIANA JAIMEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ELIZABETH MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. MARTINA MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "VIRIDIANA MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ANGELICA MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ANGELES MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ALEXA MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ADRIANA MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ROSAURA MALAGON",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA YESENIA MARTINEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ROSA MENDOZA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:03 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "OLGA NAVARRETE",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:06 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. GUADALUPE PEREZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:06 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ALMA ROSARIO PEREZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:06 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "CATALINA PERRUSQUIA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:06 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "NUBIA MARIEL PORRAS",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:06 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JUANA RAMIREZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:07 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA JOSE RAMOS",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:07 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ANAHI RIVERA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:07 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ELOISA RIVERA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:07 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA JOSE RIVERA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:07 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ELSA GUADALUPE RIVERA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:07 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JACQUELINE RIVERA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA GUADALUPE SANCHEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ANA DELIA SANCHEZ",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ALFREDO SERRANO",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA TERESA VEGA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA RAFAELA VEGA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE DOMINGO MATILDE VEGA",
+      "lider": "ANAHI RIVERA PEREZ",
+      "asistio": true,
+      "hora_llegada": "05:08 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "CECILIA GISELA BECERRA",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:56 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "CALIXTO GOMEZ",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:57 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA GUADALUPE GARCIA",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:48 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA CECILIA GARCIA",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:48 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "DULCE BERENICE GARCIA",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:40 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. DEL CARMEN MENDOZA",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ELVIRA MORALES",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:43 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "OSIEL DE JESUS PEREZ",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "04:47 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE RAUL REYES",
+      "lider": "BEATRIZ MORENO TRUJILLO",
+      "asistio": true,
+      "hora_llegada": "05:59 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA JUANA ALMARAZ",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "05:26 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA LOURDES CENTENO",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "05:26 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "LILIANA IVETTE GARCIA",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "04:40 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA GLORIA PEÑALOZA",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "04:58 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "SANDRA PEREZ",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "05:23 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "NORMA PEREZ",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "04:40 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ITZEL ARELI PEREZ",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "KAREN CECILIA RIVERA",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "05:23 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. LAURA VEGA",
+      "lider": "DULCE BERENICE GARCIA GOMEZ",
+      "asistio": true,
+      "hora_llegada": "04:41 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MONICA BARRON",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "04:45 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ANA SOFIA CAMACHO",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:30 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. PUEBLITO COLCHADO",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:59 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JULIO CESAR CRUZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ERASMO CUEVAS",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "LAURA FRANCO",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "BRENDA XIMENA HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JAZMIN GUADALUPE HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA DEL PUEBLITO HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "GLORIA HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE LUCIO HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JUAN DIEGO HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE HIPOLITO HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:27 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA HERNANDEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "CINTHYA FERNANDA MENDIETA",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:58 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ROSALBA MENDOZA",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARCOS MENDOZA",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ALFONSO MENDOZA",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JUANA GUADALUPE PRADO",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:27 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "FRANCISCO URIEL RAMIREZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:58 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "SARAI RAMIREZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA CONCEPCION SANCHEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "05:58 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA LUZ SANCHEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA SARA SANDOVAL",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "CELIA TIMOTEO",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "YAZMIN TIMOTEO",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "LILIANA YAÑEZ",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "06:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ERIKA ZUÑIGA",
+      "lider": "ERIKA ZUÑIGA RIVERA",
+      "asistio": true,
+      "hora_llegada": "04:44 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "EUSEBIO HERNANDEZ",
+      "lider": "FERNANDA GODOY RODRIGUEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARICELA ARREOLA",
+      "lider": "FRANCISCA TAMAYO MEDRANO",
+      "asistio": true,
+      "hora_llegada": "05:23 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA PUEBLITO MARGARITA GUILLEN",
+      "lider": "FRANCISCA TAMAYO MEDRANO",
+      "asistio": true,
+      "hora_llegada": "04:42 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ENRIQUETA ALVAREZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JORGE LUIS BOCANEGRA",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ROSA MARTHA CARRANZA",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:36 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA FERNANDA CRUZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "05:00 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "SANTIAGO CRUZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "GUSTAVO CRUZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "REBECA CRUZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA ROSA CRUZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "PAOLA AZUCENA FONSECA",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:35 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "RAQUEL GUILLEN",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:37 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "NANCY GUILLEN",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:38 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA FATIMA GUILLEN",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:38 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "SERGIO GUILLEN",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ESTHER YARELY LEON",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "05:30 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ELVA ANDREA LEON",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:39 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "TERESA PEA",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JUANA SANCHEZ",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": true,
+      "hora_llegada": "04:35 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ADRIANA VILLEGAS",
+      "lider": "GUSTAVO CRUZ F.",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "LUCERO ESCOBAR",
+      "lider": "LUZ MARIA MONROY SUAREZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JAVIER GARCIA",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "GERARDO FORENTINO SIMON SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MIGUEL SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "AGUSTIN SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA DE LOURDES SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ALFONSO SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ROCIO SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JESICA EDITH SANCHEZ",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "BLANCA LUCERO TAMAYO",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE DIEGO VERA",
+      "lider": "MARIA GUADALUPE SANCHEZ OLVERA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "NADIA BREÑA",
+      "lider": "NADIA BREÑA SANCHEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "FRANCISCO JAVIER BREÑA",
+      "lider": "NADIA BREÑA SANCHEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ANA PAOLA HERNANDEZ",
+      "lider": "NADIA BREÑA SANCHEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "VIVIANA MENDOZA",
+      "lider": "NADIA BREÑA SANCHEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "LUCIA MENDOZA",
+      "lider": "NADIA BREÑA SANCHEZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE GUADALUPE ALBARES",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": true,
+      "hora_llegada": "04:43 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "DIANA PAOLA DIAZ",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "EMILY STEPHANIA GALICIA",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": true,
+      "hora_llegada": "04:44 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIELA HERNANDEZ",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA DE LOS ANGELES MORAN",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "PERLA PEREZ",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA TERESA PONCE",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": true,
+      "hora_llegada": "04:42 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "NELLY RAMIREZ",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": true,
+      "hora_llegada": "04:39 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "HORTENCIA SORO",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA NATALIA SOTO",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "CRISTIANA VEGA",
+      "lider": "NALLELY RAMIREZ DIAZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA DEL CARMEN BARCENAS",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": true,
+      "hora_llegada": "05:24 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA CAROLINA GARCIA",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JUANA ANALLELY GUERRERO",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": true,
+      "hora_llegada": "05:24 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSEFINA MARGARITA JAIMEZ",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "YARELI ALEJANDRA MALAGON",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": true,
+      "hora_llegada": "05:02 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA JOSEFINA MENDOZA",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": true,
+      "hora_llegada": "05:25 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "FERNANDO PEREZ",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": true,
+      "hora_llegada": "05:25 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE PABLO ROMERO",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MA. CARMEN VEGA",
+      "lider": "ROBERTO PEREZ CENTERO",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "CRISTIAN FRANCISCO AMARTINEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "SAMUEL COLCHADO",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:55 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE CRUZ COLCHADO",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ANGELINA FLORES",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:55 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "PUEBLITO GONZALEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "GABRIELA HERNANDEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:55 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "SALVADOR HERNANDEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "ZITLALI HINOJOSA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:57 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "OSCAR MENDIETA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:55 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA DANIELA MORALES",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JORGE OLVERA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "SANDRA OLVERA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:53 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MELISA OLVERA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:53 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "CRISTINA OLVERA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:53 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ROSA OLVERA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:53 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. DE JESUS OLVERA",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:37 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "KARLA MARIA PEREZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:35 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ARMANDO SANCHEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE ANTONIO SANCHEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MIGUEL ANGEL SANCHEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:35 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JUVENTINO SANCHEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:54 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "JOSE IGNACIO SANCHEZ",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "PATRICIA TRENADO",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:54 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "ARIEL TRENADO",
+      "lider": "ROSA OLVERA MENDOZA",
+      "asistio": true,
+      "hora_llegada": "04:55 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MA. GUADALUPE AGUILAR",
+      "lider": "TERESA ORTEGA PEREZ",
+      "asistio": true,
+      "hora_llegada": "04:58 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARA CATALINA ALANIZ",
+      "lider": "TERESA ORTEGA PEREZ",
+      "asistio": false,
+      "hora_llegada": "---",
+      "ticket": false,
+      "estado": "NO ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA CRISTINA ANGELES",
+      "lider": "TERESA ORTEGA PEREZ",
+      "asistio": true,
+      "hora_llegada": "04:34 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "MARIA GUADALUPE SANCHEZ",
+      "lider": "TERESA ORTEGA PEREZ",
+      "asistio": true,
+      "hora_llegada": "04:59 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    },
+    {
+      "nombre": "FABIOLA VALENCIA",
+      "lider": "TERESA ORTEGA PEREZ",
+      "asistio": true,
+      "hora_llegada": "04:42 PM",
+      "ticket": true,
+      "estado": "ASISTIÓ"
+    }
+  ]
+}

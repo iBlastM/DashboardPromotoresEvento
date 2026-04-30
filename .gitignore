@@ -1,0 +1,37 @@
+# --- Datos crudos / intermedios ---
+base_limpia.json
+BECAS_COMPLETO_LIMPIO.json
+BECAS_COMPLETO_LIMPIO.parquet
+# Archivo original combinado (200 MB) — sustituido por data_a.json + data_b.json
+data_dashboard.json
+base_limpia2.json
+base_limpia2.csv
+
+
+
+# --- Scripts de procesamiento ---
+preprocesar.py
+check_ids.py
+crear_CSV.py
+
+# --- Notebooks ---
+*.ipynb
+.ipynb_checkpoints/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+data/
+
+AGENTS.md
+

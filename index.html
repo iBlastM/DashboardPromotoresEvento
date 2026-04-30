@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte KPI Promotores de la Paz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Exo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+    <script src="js/theme.js"></script>
+</head>
+<body>
+
+<!-- ── TOP BAR ──────────────────────────────────────────────────────────── -->
+<header class="top-bar">
+    <div class="top-bar-inner">
+        <nav class="page-nav" aria-label="Cambiar vista">
+            <select id="seccion-select" class="page-nav-btn">
+                <option value="global">Vista Global</option>
+                <option value="individual">Vista Individual</option>
+            </select>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">☀</button>
+        <div class="brand-divider"></div>
+        <div class="brand-logo" aria-label="Metrix">
+            <img src="images/logo.png" alt="Metrix" class="brand-img brand-img-dark">
+            <img src="images/logoBlanco.png" alt="Metrix" class="brand-img brand-img-light">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.1rem;">
+            <h1 class="dashboard-title">Reporte KPI Promotores de la Paz</h1>
+            <span id="dashboard-subtitle" class="dashboard-subtitle">Cargando información del evento…</span>
+        </div>
+        <img src="images/heraldica-para-pag-web-01_180x180px.png" alt="Escudo" class="brand-escudo">
+    </div>
+</header>
+
+<!-- ── BANNER DE ERROR ──────────────────────────────────────────────────── -->
+<div id="error-msg" class="error-banner" style="display:none;">
+    No se pudo cargar los datos.
+    Ejecuta primero <code>python scripts/preparar_promotores.py</code>.
+</div>
+
+<!-- ── BARRA DE FILTROS (solo individual) ──────────────────────── -->
+<div class="filtros-bar" id="filtros-bar" style="display:none;">
+    <div class="filtros-inner">
+        <div class="filtro-grupo" id="grupo-filtro-lider">
+            <label class="filtro-label">Promotor / Líder</label>
+            <select id="select-lider-individual" class="filtro-select filtro-select-lg">
+                <option value="">Seleccionar líder…</option>
+            </select>
+        </div>
+        <button id="filtro-limpiar" class="filtro-btn-limpiar">Limpiar</button>
+    </div>
+</div>
+
+<!-- ── KPI CARDS ─────────────────────────────────────────────────────────── -->
+<div class="container kpi-wrapper">
+    <section class="section">
+        <h2 class="section-title" id="kpi-section-title">Indicadores del Evento</h2>
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-label">Total Invitados</span>
+                <span class="kpi-value" id="kpi-invitados">—</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">Total Asistentes</span>
+                <span class="kpi-value" id="kpi-asistentes">—</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">No Asistieron</span>
+                <span class="kpi-value" id="kpi-no-asistieron">—</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label" id="kpi-label-efectividad">Efectividad Global</span>
+                <span class="kpi-value" id="kpi-efectividad">—</span>
+            </div>
+            <div class="kpi-card" id="kpi-card-lideres">
+                <span class="kpi-label">Total Líderes</span>
+                <span class="kpi-value" id="kpi-lideres">—</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-label">Tickets Entregados</span>
+                <span class="kpi-value" id="kpi-tickets">—</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ── PANELES DE CONTENIDO ──────────────────────────────────────────────── -->
+<main id="tab-panels" class="container"></main>
+
+<!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+    <span>Promotores de la Paz · SEDESOC 2026 · Gobierno de Corregidora</span>
+</footer>
+
+<!-- ── SCRIPTS ──────────────────────────────────────────────────────────── -->
+<script src="js/config.js"></script>
+<script src="js/cargarDatos.js"></script>
+<script src="js/filtros.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/kpis.js"></script>
+<script src="js/graficaGlobal.js"></script>
+<script src="js/graficaIndividual.js"></script>
+<script src="js/loader.js"></script>
+
+</body>
+</html>
