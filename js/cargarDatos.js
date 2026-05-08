@@ -13,8 +13,9 @@ async function cargarDatos() {
         window.liderSeleccionado = '';
 
         const sub = document.getElementById('dashboard-subtitle');
-        if (sub && json.meta) {
-            sub.textContent = `Fecha: ${json.meta.fecha || ''}  |  Lugar: ${json.meta.lugar || ''}`;
+        if (sub) {
+            const evtCount = (json.eventos || []).length;
+            sub.textContent = `${evtCount} evento${evtCount !== 1 ? 's' : ''} cargado${evtCount !== 1 ? 's' : ''}`;
         }
 
         document.dispatchEvent(new Event('datosListos'));

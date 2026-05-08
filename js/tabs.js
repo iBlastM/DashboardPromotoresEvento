@@ -5,12 +5,26 @@ window._tabActual = null;
 function seleccionarLiderNumeroUno() {
     const full = window.dashDataFull;
     if (!full || !full.lideres || !full.lideres.length) return;
-    // Buscar líder con ranking 1
-    const lider1 = full.lideres.find(r => r.ranking === 1);
-    if (!lider1) return;
-    window.liderSeleccionado = lider1.nombre;
-    const sel = document.getElementById('select-lider-individual');
-    if (sel) sel.value = lider1.nombre;
+
+    const eventoSel = document.getElementById('select-evento')?.value || '';
+    let lideres = full.lideres;
+    if (eventoSel) {
+        lideres = lideres.filter(r => r.evento === eventoSel);
+    }
+
+    // Buscar líder con ranking #1 (basado en nombre que empieza con #1 o efectividad más alta)
+    const lider1 = lideres.reduce((best, r) => {
+        if (!best || r.efectividad > best.efectividad) return r;
+        return best;
+    }, null);
+
+    if (lider1) {
+        window.liderSeleccionado = lider1.nombre;
+        const input = document.getElementById('combo-lider-input');
+        const hidden = document.getElementById('combo-lider-value');
+        if (input) input.value = lider1.nombre;
+        if (hidden) hidden.value = lider1.nombre;
+    }
 }
 
 function activarSeccion(seccionId) {
@@ -23,21 +37,30 @@ function activarSeccion(seccionId) {
         s.hidden = s.id !== 'tab-' + seccionId;
     });
 
-    // Mostrar/ocultar barra de filtros según sección
-    const filtrosBar = document.getElementById('filtros-bar');
-    const grupoLider = document.getElementById('grupo-filtro-lider');
-    if (grupoLider) {
-        grupoLider.style.display = seccionId === 'individual' ? '' : 'none';
-    }
-    if (filtrosBar) {
-        const anyVisible = Array.from(filtrosBar.querySelectorAll('.filtro-grupo'))
-            .some(g => g.style.display !== 'none');
-        filtrosBar.style.display = anyVisible ? '' : 'none';
+    // Mostrar/ocultar KPIs
+    const kpiWrapper = document.querySelector('.kpi-wrapper');
+    if (kpiWrapper) {
+        kpiWrapper.style.display = seccionId === 'ciudadanos' ? 'none' : '';
     }
 
-    // Si entramos a individual sin líder seleccionado, elegir automáticamente el #1
+    // Mostrar/ocultar filtro de líder según sección
+    const grupoLider = document.getElementById('grupo-filtro-lider');
+    if (grupoLider) {
+        grupoLider.style.display = (seccionId === 'individual' || seccionId === 'ciudadanos') ? '' : 'none';
+    }
+
+    // Si entramos a individual sin líder seleccionado, elegir automáticamente el mejor
     if (seccionId === 'individual' && !window.liderSeleccionado) {
         seleccionarLiderNumeroUno();
+    }
+
+    // Si entramos a global, limpiar filtro de líder
+    if (seccionId === 'global') {
+        const input = document.getElementById('combo-lider-input');
+        const hidden = document.getElementById('combo-lider-value');
+        if (input) input.value = '';
+        if (hidden) hidden.value = '';
+        window.liderSeleccionado = '';
     }
 
     setTimeout(() => {
@@ -48,8 +71,8 @@ function activarSeccion(seccionId) {
                 Plotly.Plots.resize(gd);
             });
         }
-        if (window.dashDataFull) {
-            document.dispatchEvent(new Event('datosListos'));
+        if (window.dashDataFull && typeof aplicarFiltros === 'function') {
+            aplicarFiltros();
         }
     }, 80);
 }
@@ -62,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const secciones = [
         { id: 'global', src: 'partials/global.html' },
         { id: 'individual', src: 'partials/individual.html' },
+        { id: 'ciudadanos', src: 'partials/ciudadanos.html' },
     ];
 
     let loaded = 0;

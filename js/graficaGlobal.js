@@ -1,11 +1,37 @@
 // ── GRAFICA_GLOBAL.JS ── Promotores de la Paz ─────────────────────────────
 
+function consolidarLideres(lideres) {
+    const map = {};
+    lideres.forEach(r => {
+        const nombre = r.nombre || 'Sin nombre';
+        if (!map[nombre]) {
+            map[nombre] = {
+                nombre: nombre,
+                invitados: 0,
+                asistieron: 0,
+                no_asistieron: 0,
+                estado: r.estado || 'Cumplió',
+            };
+        }
+        map[nombre].invitados += r.invitados || 0;
+        map[nombre].asistieron += r.asistieron || 0;
+        map[nombre].no_asistieron += r.no_asistieron || 0;
+        if (r.estado === 'Bajó') map[nombre].estado = 'Bajó';
+    });
+    return Object.values(map).map(r => ({
+        ...r,
+        efectividad: r.invitados ? parseFloat(((r.asistieron / r.invitados) * 100).toFixed(1)) : 0,
+    }));
+}
+
 function renderGlobal() {
     if (window._tabActual !== 'global') return;
     const data = window.dashData || {};
     const resumen = data.resumen || {};
     const lideres = data.lideres || [];
     const porHora = data.por_hora || [];
+
+    const lideresConsolidados = consolidarLideres(lideres);
 
     const elPie = document.getElementById('global-asistencia-pie');
     const elEstado = document.getElementById('global-estado-lideres');
@@ -36,7 +62,7 @@ function renderGlobal() {
     // 2. Estado de líderes (Pie)
     if (elEstado) {
         const estados = { 'Cumplió': 0, 'Bajó': 0 };
-        lideres.forEach(r => { estados[r.estado] = (estados[r.estado] || 0) + 1; });
+        lideresConsolidados.forEach(r => { estados[r.estado] = (estados[r.estado] || 0) + 1; });
         const pieEstado = [
             {
                 type: 'pie',
@@ -58,14 +84,14 @@ function renderGlobal() {
     // 3. Top 5 / 10 ranking por Asistentes (Bar horizontal)
     if (elTopA) {
         const renderTopAsistentes = (n) => {
-            const sorted = [...lideres].sort((a, b) => b.asistieron - a.asistieron).slice(0, n);
+            const sorted = [...lideresConsolidados].sort((a, b) => b.asistieron - a.asistieron).slice(0, n);
             const barAsistentes = [
                 {
                     type: 'bar',
                     x: sorted.map(r => r.asistieron),
                     y: sorted.map(r => r.nombre),
                     orientation: 'h',
-                    marker: { color: C.getPalette(sorted.length, 0) },
+                    marker: { color: C.verde },
                     text: sorted.map(r => String(r.asistieron)),
                     textposition: 'outside',
                     hovertemplate: '%{y}<br>Asistentes: %{x}<extra></extra>',
@@ -96,14 +122,14 @@ function renderGlobal() {
     // 4. Top 5 / 10 ranking por % Efectividad (Bar horizontal)
     if (elTopE) {
         const renderTopEfectividad = (n) => {
-            const sorted = [...lideres].sort((a, b) => b.efectividad - a.efectividad).slice(0, n);
+            const sorted = [...lideresConsolidados].sort((a, b) => b.efectividad - a.efectividad).slice(0, n);
             const barEfectividad = [
                 {
                     type: 'bar',
                     x: sorted.map(r => r.efectividad),
                     y: sorted.map(r => r.nombre),
                     orientation: 'h',
-                    marker: { color: C.getPalette(sorted.length, 3) },
+                    marker: { color: C.verde },
                     text: sorted.map(r => r.efectividad.toFixed(1) + '%'),
                     textposition: 'outside',
                     hovertemplate: '%{y}<br>Efectividad: %{x:.1f}%<extra></extra>',
@@ -133,18 +159,27 @@ function renderGlobal() {
 
     // 5. Distribución de llegadas por hora (Bar)
     if (elHora) {
+        // Agrupar por franja horaria y sumar asistentes
+        const gruposHora = {};
+        porHora.forEach(r => {
+            const franja = r.franja || 'Sin franja';
+            gruposHora[franja] = (gruposHora[franja] || 0) + (r.asistentes || 0);
+        });
+        const franjas = Object.keys(gruposHora);
+        const asistentes = franjas.map(f => gruposHora[f]);
+
         const barHora = [
             {
                 type: 'bar',
-                x: porHora.map(r => r.franja),
-                y: porHora.map(r => r.asistentes),
-                marker: { color: C.getPalette(porHora.length, 0) },
-                text: porHora.map(r => String(r.asistentes)),
+                x: franjas,
+                y: asistentes,
+                marker: { color: C.verde },
+                text: asistentes.map(String),
                 textposition: 'outside',
                 hovertemplate: '%{x}<br>Asistentes: %{y}<extra></extra>',
             }
         ];
-        const maxAsis = Math.max(...porHora.map(r => r.asistentes), 0);
+        const maxAsis = Math.max(...asistentes, 0);
         Plotly.newPlot('global-llegadas-hora', barHora, getLayout('Distribución de Llegadas por Hora', {
             xaxis: { title: 'Franja Horaria' },
             yaxis: { title: 'Asistentes', range: [0, Math.ceil(maxAsis * 1.25)] },

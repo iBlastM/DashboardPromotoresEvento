@@ -1,6 +1,22 @@
 // ── CONFIG.JS ── DashboardBecas ────────────────────────────────────────────────
 // Tema, helpers de layout y utilidades de datos compartidas.
 
+const EVENTOS_META = {
+    'Huimilpan 4PM': { fecha: '24 de abril', hora: '16:00' },
+    'NOCHE Huimilpan': { fecha: '24 de abril', hora: '18:00' },
+    'PRIMARIA (1 CORTE 4 DE MAYO)': { fecha: '4 de mayo', hora: '' },
+    'Corregidora BRAVO': { fecha: '', hora: '' },
+    'Corregidora San Rafael': { fecha: '28 de abril', hora: '' },
+    'Colón': { fecha: '28 de abril', hora: '' },
+    'Cadereyta': { fecha: '22 de abril', hora: '' },
+};
+
+function getEventoMeta(nombreEvento) {
+    if (!nombreEvento) return null;
+    const key = Object.keys(EVENTOS_META).find(k => k.toLowerCase() === nombreEvento.toLowerCase());
+    return key ? EVENTOS_META[key] : null;
+}
+
 const C = {
     get isLight() { return document.documentElement.dataset.theme === 'light'; },
     get plotBg()  { return this.isLight ? '#ffffff' : '#060606'; },

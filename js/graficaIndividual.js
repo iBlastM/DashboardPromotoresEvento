@@ -27,13 +27,29 @@ function renderIndividual() {
     const lider = (full.lideres || []).find(r => r.nombre === liderNombre);
     if (!lider) return;
 
+    // Calcular ranking dinámicamente si no existe
+    let ranking = lider.ranking;
+    if (ranking === undefined || ranking === null || ranking === 0) {
+        const eventoSel = document.getElementById('select-evento')?.value || '';
+        let todosLideres = full.lideres || [];
+        if (eventoSel) {
+            todosLideres = todosLideres.filter(r => r.evento === eventoSel);
+        }
+        // Ordenar por efectividad descendente, luego por asistieron descendente
+        const sorted = [...todosLideres].sort((a, b) => {
+            if (b.efectividad !== a.efectividad) return b.efectividad - a.efectividad;
+            return b.asistieron - a.asistieron;
+        });
+        ranking = sorted.findIndex(r => r.nombre === liderNombre) + 1;
+    }
+
     // 1. Ranking (Indicator)
     if (elRanking) {
         const indicatorRanking = [
             {
                 type: 'indicator',
                 mode: 'number',
-                value: lider.ranking,
+                value: ranking,
                 title: { text: 'Ranking General' },
                 number: { font: { size: 64, family: C.fuente, color: C.textColor } },
                 domain: { x: [0, 1], y: [0, 1] },

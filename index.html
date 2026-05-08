@@ -23,6 +23,7 @@
             <select id="seccion-select" class="page-nav-btn">
                 <option value="global">Vista Global</option>
                 <option value="individual">Vista Individual</option>
+                <option value="ciudadanos">Registro de Ciudadanos</option>
             </select>
         </nav>
         <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">☀</button>
@@ -45,14 +46,24 @@
     Ejecuta primero <code>python scripts/preparar_promotores.py</code>.
 </div>
 
-<!-- ── BARRA DE FILTROS (solo individual) ──────────────────────── -->
-<div class="filtros-bar" id="filtros-bar" style="display:none;">
+<!-- ── BARRA DE FILTROS ──────────────────────────────────────── -->
+<div class="filtros-bar" id="filtros-bar">
     <div class="filtros-inner">
+        <div class="filtro-grupo" id="grupo-filtro-evento">
+            <label class="filtro-label">Evento</label>
+            <select id="select-evento" class="filtro-select filtro-select-lg">
+                <option value="">Todos los eventos</option>
+            </select>
+        </div>
         <div class="filtro-grupo" id="grupo-filtro-lider">
             <label class="filtro-label">Promotor / Líder</label>
-            <select id="select-lider-individual" class="filtro-select filtro-select-lg">
-                <option value="">Seleccionar líder…</option>
-            </select>
+            <div class="combo-search-wrap" id="combo-lider">
+                <input type="text" id="combo-lider-input" class="combo-search-input" placeholder="Buscar o seleccionar promotor…" autocomplete="off">
+                <div class="combo-search-dropdown" id="combo-lider-dropdown">
+                    <div class="combo-search-list" id="combo-lider-list"></div>
+                </div>
+                <input type="hidden" id="combo-lider-value" value="">
+            </div>
         </div>
         <button id="filtro-limpiar" class="filtro-btn-limpiar">Limpiar</button>
     </div>
@@ -107,6 +118,7 @@
 <script src="js/kpis.js"></script>
 <script src="js/graficaGlobal.js"></script>
 <script src="js/graficaIndividual.js"></script>
+<script src="js/ciudadanos.js"></script>
 <script src="js/loader.js"></script>
 
 </body>

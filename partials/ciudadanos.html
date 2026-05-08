@@ -1,0 +1,63 @@
+<!-- partials/ciudadanos.html -->
+<div class="section">
+  <h2 class="section-title">Registro de Ciudadanos</h2>
+  <div class="ciudadanos-layout">
+    <div class="ciudadanos-table-wrap">
+      <table class="ciudadanos-table">
+        <thead>
+          <tr>
+            <th>Ciudadano</th>
+            <th>Promotor / Líder</th>
+            <th id="th-asistencia">Asistió</th>
+            <th id="th-hora">Hora de Llegada</th>
+          </tr>
+        </thead>
+        <tbody id="ciudadanos-tbody">
+          <tr>
+            <td colspan="4" style="text-align:center;color:var(--text-muted);padding:2rem;">
+              Selecciona un evento para ver los registros
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <aside class="ciudadanos-summary">
+      <div class="ciudadanos-card ciu-card-total">
+        <div class="ciudadanos-icon-box">👤</div>
+        <div class="ciudadanos-card-body">
+          <span class="ciudadanos-card-value" id="ciu-total">0</span>
+          <span class="ciudadanos-card-label">Total Invitados</span>
+        </div>
+      </div>
+      <div class="ciudadanos-card ciu-card-present">
+        <div class="ciudadanos-icon-box">✅</div>
+        <div class="ciudadanos-card-body">
+          <span class="ciudadanos-card-value" id="ciu-presentes">0</span>
+          <span class="ciudadanos-card-label">Asistieron</span>
+        </div>
+      </div>
+      <div class="ciudadanos-card ciu-card-absent">
+        <div class="ciudadanos-icon-box">❌</div>
+        <div class="ciudadanos-card-body">
+          <span class="ciudadanos-card-value" id="ciu-ausentes">0</span>
+          <span class="ciudadanos-card-label">No Asistieron</span>
+        </div>
+      </div>
+      <div class="ciudadanos-card ciu-card-efectividad">
+        <div class="ciudadanos-icon-box">📊</div>
+        <div class="ciudadanos-card-body">
+          <span class="ciudadanos-card-value" id="ciu-efectividad">0%</span>
+          <span class="ciudadanos-card-label">Efectividad Global</span>
+        </div>
+      </div>
+      <div class="ciudadanos-card ciu-card-eventos">
+        <div class="ciudadanos-icon-box">📅</div>
+        <div class="ciudadanos-card-body">
+          <span class="ciudadanos-card-value" id="ciu-eventos-val">0</span>
+          <span class="ciudadanos-card-label" id="ciu-eventos-label">Total Eventos</span>
+          <span class="ciudadanos-card-sublabel" id="ciu-eventos-sub"></span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
