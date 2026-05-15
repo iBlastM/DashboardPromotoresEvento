@@ -49,6 +49,12 @@ function activarSeccion(seccionId) {
         grupoLider.style.display = (seccionId === 'individual' || seccionId === 'ciudadanos') ? '' : 'none';
     }
 
+    // Mostrar/ocultar filtro de Etiquetas (radar) solo en global
+    const grupoEtiquetas = document.getElementById('grupo-filtro-etiquetas');
+    if (grupoEtiquetas) {
+        grupoEtiquetas.style.display = seccionId === 'global' ? '' : 'none';
+    }
+
     // Si entramos a individual sin líder seleccionado, elegir automáticamente el mejor
     if (seccionId === 'individual' && !window.liderSeleccionado) {
         seleccionarLiderNumeroUno();

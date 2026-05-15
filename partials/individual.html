@@ -1,21 +1,27 @@
 <!-- partials/individual.html -->
 <div class="section">
   <h2 class="section-title">Detalle por Líder</h2>
-  <div id="ind-msg" style="text-align:center;padding:2rem;color:var(--text-muted);display:none;">
+  <div id="ind-msg" style="text-align:center;padding:2.5rem;color:var(--text-muted);display:none;">
     Selecciona un líder en el filtro <strong>"Ver Individual"</strong> para ver su desempeño.
   </div>
-  <div class="charts-grid cols-2" id="ind-grid">
-    <div class="chart-card">
-      <div id="ind-ranking" class="chart-container"></div>
+  <div id="ind-grid" style="display:none;">
+    <!-- Fila 1: Ranking (35%) + Gauge efectividad (65%) -->
+    <div class="charts-grid charts-grid--ind-top">
+      <div class="chart-card chart-card--gold">
+        <div id="ind-ranking" class="chart-container chart-sm"></div>
+      </div>
+      <div class="chart-card chart-card--lime">
+        <div id="ind-efectividad" class="chart-container chart-sm"></div>
+      </div>
     </div>
-    <div class="chart-card">
-      <div id="ind-efectividad" class="chart-container"></div>
-    </div>
-    <div class="chart-card">
-      <div id="ind-asistencia" class="chart-container"></div>
-    </div>
-    <div class="chart-card">
-      <div id="ind-estado" class="chart-container"></div>
+    <!-- Fila 2: Pie asistencia (60%) + Estado (40%) -->
+    <div class="charts-grid charts-grid--ind-bottom">
+      <div class="chart-card chart-card--teal">
+        <div id="ind-asistencia" class="chart-container chart-md"></div>
+      </div>
+      <div class="chart-card chart-card--coral">
+        <div id="ind-estado" class="chart-container chart-md"></div>
+      </div>
     </div>
   </div>
 </div>

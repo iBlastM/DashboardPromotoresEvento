@@ -476,6 +476,9 @@ function ensureTraceFilterDropdown(targetEl, traces, layout) {
                 <span class="chk-chevron">▾</span>
             </button>
             <div class="chk-dropdown-panel" role="dialog" aria-label="Seleccionar etiquetas visibles">
+                <div class="chk-dropdown-search">
+                    <input type="text" class="chk-search-input" placeholder="🔍 Buscar…" autocomplete="off">
+                </div>
                 <div class="chk-dropdown-actions">
                     <button type="button" class="chk-action-btn" data-action="all">Todas</button>
                     <button type="button" class="chk-action-btn" data-action="none">Ninguna</button>
@@ -506,6 +509,14 @@ function ensureTraceFilterDropdown(targetEl, traces, layout) {
         wrap.querySelector('[data-action="none"]')?.addEventListener('click', () => {
             items.querySelectorAll('input[type="checkbox"]').forEach(cb => { cb.checked = false; });
             applyTraceVisibility(targetEl, items);
+        });
+
+        wrap.querySelector('.chk-search-input')?.addEventListener('input', function () {
+            const q = this.value.trim().toLowerCase();
+            items.querySelectorAll('.chk-item').forEach(row => {
+                const text = row.querySelector('span')?.textContent.toLowerCase() || '';
+                row.style.display = (!q || text.includes(q)) ? '' : 'none';
+            });
         });
 
         wrap.dataset.bound = '1';
