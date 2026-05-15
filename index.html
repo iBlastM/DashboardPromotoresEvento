@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Exo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Exo+2:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 
@@ -15,188 +18,195 @@
     <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
     <script src="js/theme.js"></script>
 </head>
+
 <body>
 
-<!-- ── TOP BAR ──────────────────────────────────────────────────────────── -->
-<header class="top-bar">
-    <div class="top-bar-inner">
-        <nav class="page-nav" aria-label="Cambiar vista">
-            <select id="seccion-select" class="page-nav-btn">
-                <option value="global">Vista Global</option>
-                <option value="individual">Vista Individual</option>
-                <option value="ciudadanos">Registro de Ciudadanos</option>
-            </select>
-        </nav>
-        <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">☀</button>
-        <div class="brand-divider"></div>
-        <div class="brand-logo" aria-label="Metrix">
-            <img src="images/logo.png" alt="Metrix" class="brand-img brand-img-dark">
-            <img src="images/logoBlanco.png" alt="Metrix" class="brand-img brand-img-light">
+    <!-- ── TOP BAR ──────────────────────────────────────────────────────────── -->
+    <header class="top-bar">
+        <div class="top-bar-inner">
+            <nav class="page-nav" aria-label="Cambiar vista">
+                <select id="seccion-select" class="page-nav-btn">
+                    <option value="global">Vista Global</option>
+                    <option value="individual">Vista Individual</option>
+                    <option value="ciudadanos">Registro de Ciudadanos</option>
+                </select>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">☀</button>
+            <div class="brand-divider"></div>
+            <div class="brand-logo" aria-label="Metrix">
+                <img src="images/logo.png" alt="Metrix" class="brand-img brand-img-dark">
+                <img src="images/logoBlanco.png" alt="Metrix" class="brand-img brand-img-light">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.1rem;">
+                <h1 class="dashboard-title">Reporte KPI Promotores de la Paz</h1>
+                <span id="dashboard-subtitle" class="dashboard-subtitle">Cargando información del evento…</span>
+            </div>
+            <img src="images/heraldica-para-pag-web-01_180x180px.png" alt="Escudo" class="brand-escudo">
         </div>
-        <div style="display:flex;flex-direction:column;gap:0.1rem;">
-            <h1 class="dashboard-title">Reporte KPI Promotores de la Paz</h1>
-            <span id="dashboard-subtitle" class="dashboard-subtitle">Cargando información del evento…</span>
-        </div>
-        <img src="images/heraldica-para-pag-web-01_180x180px.png" alt="Escudo" class="brand-escudo">
+    </header>
+
+    <!-- ── BANNER DE ERROR ──────────────────────────────────────────────────── -->
+    <div id="error-msg" class="error-banner" style="display:none;">
+        No se pudo cargar los datos.
+        Ejecuta primero <code>python scripts/preparar_promotores.py</code>.
     </div>
-</header>
 
-<!-- ── BANNER DE ERROR ──────────────────────────────────────────────────── -->
-<div id="error-msg" class="error-banner" style="display:none;">
-    No se pudo cargar los datos.
-    Ejecuta primero <code>python scripts/preparar_promotores.py</code>.
-</div>
-
-<!-- ── BARRA DE FILTROS ──────────────────────────────────────── -->
-<div class="filtros-bar" id="filtros-bar">
-    <div class="filtros-inner">
-        <div class="filtro-grupo" id="grupo-filtro-evento">
-            <label class="filtro-label">Evento</label>
-            <div class="combo-search-wrap" id="combo-evento">
-                <input type="text" id="combo-evento-input" class="combo-search-input" placeholder="Todos los eventos…" autocomplete="off">
-                <div class="combo-search-dropdown" id="combo-evento-dropdown">
-                    <div class="combo-search-list" id="combo-evento-list"></div>
-                </div>
-                <input type="hidden" id="select-evento" value="">
-            </div>
-        </div>
-        <div class="filtro-grupo" id="grupo-filtro-lider">
-            <label class="filtro-label">Promotor / Líder</label>
-            <div class="combo-search-wrap" id="combo-lider">
-                <input type="text" id="combo-lider-input" class="combo-search-input" placeholder="Buscar o seleccionar promotor…" autocomplete="off">
-                <div class="combo-search-dropdown" id="combo-lider-dropdown">
-                    <div class="combo-search-list" id="combo-lider-list"></div>
-                </div>
-                <input type="hidden" id="combo-lider-value" value="">
-            </div>
-        </div>
-        <button id="filtro-limpiar" class="filtro-btn-limpiar">Limpiar</button>
-
-        <!-- Dropdown Etiquetas (radar) — solo visible en Vista Global -->
-        <div class="filtro-grupo" id="grupo-filtro-etiquetas" style="display:none;">
-            <label class="filtro-label">Etiquetas</label>
-            <div class="combo-search-wrap" id="combo-etiquetas">
-                <button type="button" id="combo-etiquetas-btn" class="combo-search-input" style="text-align:left;cursor:pointer;">Seleccionar líderes…</button>
-                <div class="combo-search-dropdown" id="combo-etiquetas-dropdown" style="overflow:visible;max-height:none;">
-                    <div style="padding:0.4rem 0.55rem;border-bottom:1px solid var(--border);">
-                        <input type="text" id="radar-etiquetas-search" class="radar-search" placeholder="🔍 Ranking o nombre…" autocomplete="off">
+    <!-- ── BARRA DE FILTROS ──────────────────────────────────────── -->
+    <div class="filtros-bar" id="filtros-bar">
+        <div class="filtros-inner">
+            <div class="filtro-grupo" id="grupo-filtro-evento">
+                <label class="filtro-label">Evento</label>
+                <div class="combo-search-wrap" id="combo-evento">
+                    <input type="text" id="combo-evento-input" class="combo-search-input"
+                        placeholder="Todos los eventos…" autocomplete="off">
+                    <div class="combo-search-dropdown" id="combo-evento-dropdown">
+                        <div class="combo-search-list" id="combo-evento-list"></div>
                     </div>
-                    <div style="display:flex;gap:0.4rem;padding:0.3rem 0.55rem;border-bottom:1px solid var(--border);">
-                        <button class="radar-btn-all" style="flex:1;">Todas</button>
-                        <button class="radar-btn-none" style="flex:1;">Ninguna</button>
-                    </div>
-                    <div class="radar-list" id="radar-etiquetas-list" style="max-height:200px;overflow-y:auto;"></div>
+                    <input type="hidden" id="select-evento" value="">
                 </div>
             </div>
+
+            <button id="filtro-limpiar" class="filtro-btn-limpiar">Limpiar</button>
+
         </div>
     </div>
-</div>
 
-<!-- ── KPI CARDS ─────────────────────────────────────────────────────────── -->
-<div class="container kpi-wrapper">
-    <section class="section">
-        <h2 class="section-title" id="kpi-section-title">Indicadores Generales</h2>
-        <div class="kpi-grid">
+    <!-- ── KPI CARDS ─────────────────────────────────────────────────────────── -->
+    <div class="container kpi-wrapper">
+        <section class="section">
+            <h2 class="section-title" id="kpi-section-title">Indicadores Generales</h2>
+            <div class="kpi-grid">
 
-            <!-- Número de Eventos -->
-            <div class="kpi-card kpi-card--eventos" id="kpi-card-eventos">
-                <div class="kpi-icon-wrap kpi-icon--eventos">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <!-- Número de Eventos -->
+                <div class="kpi-card kpi-card--eventos" id="kpi-card-eventos">
+                    <div class="kpi-icon-wrap kpi-icon--eventos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">Número de Eventos</span>
+                        <span class="kpi-value" id="kpi-num-eventos">—</span>
+                    </div>
+                    <div class="kpi-spark-wrap">
+                        <svg class="kpi-spark" id="spark-eventos" viewBox="0 0 110 40" preserveAspectRatio="none"
+                            aria-hidden="true"></svg>
+                    </div>
+                    <div class="kpi-accent-bar kpi-accent-bar--eventos"></div>
                 </div>
-                <div class="kpi-body">
-                    <span class="kpi-label">Número de Eventos</span>
-                    <span class="kpi-value" id="kpi-num-eventos">—</span>
+
+                <!-- Total Invitados -->
+                <div class="kpi-card kpi-card--invitados">
+                    <div class="kpi-icon-wrap kpi-icon--invitados">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">Total de Invitados</span>
+                        <span class="kpi-value" id="kpi-invitados">—</span>
+                    </div>
+                    <div class="kpi-spark-wrap">
+                        <svg class="kpi-spark" id="spark-invitados" viewBox="0 0 110 40" preserveAspectRatio="none"
+                            aria-hidden="true"></svg>
+                    </div>
+                    <div class="kpi-accent-bar kpi-accent-bar--invitados"></div>
                 </div>
-                <div class="kpi-spark-wrap">
-                    <svg class="kpi-spark" id="spark-eventos" viewBox="0 0 110 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+                <!-- Total Asistencias -->
+                <div class="kpi-card kpi-card--asistentes">
+                    <div class="kpi-icon-wrap kpi-icon--asistentes">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">Total de Asistencias</span>
+                        <span class="kpi-value" id="kpi-asistentes">—</span>
+                    </div>
+                    <div class="kpi-spark-wrap">
+                        <svg class="kpi-spark" id="spark-asistentes" viewBox="0 0 110 40" preserveAspectRatio="none"
+                            aria-hidden="true"></svg>
+                    </div>
+                    <div class="kpi-accent-bar kpi-accent-bar--asistentes"></div>
                 </div>
-                <div class="kpi-accent-bar kpi-accent-bar--eventos"></div>
+
+                <!-- Total Inasistencias -->
+                <div class="kpi-card kpi-card--ausentes">
+                    <div class="kpi-icon-wrap kpi-icon--ausentes">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="15" y1="9" x2="9" y2="15" />
+                            <line x1="9" y1="9" x2="15" y2="15" />
+                        </svg>
+                    </div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">Total de Inasistencias</span>
+                        <span class="kpi-value" id="kpi-no-asistieron">—</span>
+                    </div>
+                    <div class="kpi-spark-wrap">
+                        <svg class="kpi-spark" id="spark-ausentes" viewBox="0 0 110 40" preserveAspectRatio="none"
+                            aria-hidden="true"></svg>
+                    </div>
+                    <div class="kpi-accent-bar kpi-accent-bar--ausentes"></div>
+                </div>
+
+                <!-- % de Efectividad -->
+                <div class="kpi-card kpi-card--efectividad">
+                    <div class="kpi-icon-wrap kpi-icon--efectividad">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                    </div>
+                    <div class="kpi-body">
+                        <span class="kpi-label" id="kpi-label-efectividad">% de Efectividad</span>
+                        <span class="kpi-value" id="kpi-efectividad">—</span>
+                    </div>
+                    <div class="kpi-spark-wrap">
+                        <svg class="kpi-spark" id="spark-efectividad" viewBox="0 0 110 40" preserveAspectRatio="none"
+                            aria-hidden="true"></svg>
+                    </div>
+                    <div class="kpi-accent-bar kpi-accent-bar--efectividad"></div>
+                </div>
+
+
+
             </div>
+        </section>
+    </div>
 
-            <!-- Total Invitados -->
-            <div class="kpi-card kpi-card--invitados">
-                <div class="kpi-icon-wrap kpi-icon--invitados">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <div class="kpi-body">
-                    <span class="kpi-label">Total de Invitados</span>
-                    <span class="kpi-value" id="kpi-invitados">—</span>
-                </div>
-                <div class="kpi-spark-wrap">
-                    <svg class="kpi-spark" id="spark-invitados" viewBox="0 0 110 40" preserveAspectRatio="none" aria-hidden="true"></svg>
-                </div>
-                <div class="kpi-accent-bar kpi-accent-bar--invitados"></div>
-            </div>
+    <!-- ── PANELES DE CONTENIDO ──────────────────────────────────────────────── -->
+    <main id="tab-panels" class="container"></main>
 
-            <!-- Total Asistencias -->
-            <div class="kpi-card kpi-card--asistentes">
-                <div class="kpi-icon-wrap kpi-icon--asistentes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="kpi-body">
-                    <span class="kpi-label">Total de Asistencias</span>
-                    <span class="kpi-value" id="kpi-asistentes">—</span>
-                </div>
-                <div class="kpi-spark-wrap">
-                    <svg class="kpi-spark" id="spark-asistentes" viewBox="0 0 110 40" preserveAspectRatio="none" aria-hidden="true"></svg>
-                </div>
-                <div class="kpi-accent-bar kpi-accent-bar--asistentes"></div>
-            </div>
+    <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+    <footer class="footer">
+        <span>Promotores de la Paz · SEDESOC 2026 · Gobierno de Corregidora</span>
+    </footer>
 
-            <!-- Total Inasistencias -->
-            <div class="kpi-card kpi-card--ausentes">
-                <div class="kpi-icon-wrap kpi-icon--ausentes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-                </div>
-                <div class="kpi-body">
-                    <span class="kpi-label">Total de Inasistencias</span>
-                    <span class="kpi-value" id="kpi-no-asistieron">—</span>
-                </div>
-                <div class="kpi-spark-wrap">
-                    <svg class="kpi-spark" id="spark-ausentes" viewBox="0 0 110 40" preserveAspectRatio="none" aria-hidden="true"></svg>
-                </div>
-                <div class="kpi-accent-bar kpi-accent-bar--ausentes"></div>
-            </div>
-
-            <!-- % de Efectividad -->
-            <div class="kpi-card kpi-card--efectividad">
-                <div class="kpi-icon-wrap kpi-icon--efectividad">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                </div>
-                <div class="kpi-body">
-                    <span class="kpi-label" id="kpi-label-efectividad">% de Efectividad</span>
-                    <span class="kpi-value" id="kpi-efectividad">—</span>
-                </div>
-                <div class="kpi-spark-wrap">
-                    <svg class="kpi-spark" id="spark-efectividad" viewBox="0 0 110 40" preserveAspectRatio="none" aria-hidden="true"></svg>
-                </div>
-                <div class="kpi-accent-bar kpi-accent-bar--efectividad"></div>
-            </div>
-
-
-
-        </div>
-    </section>
-</div>
-
-<!-- ── PANELES DE CONTENIDO ──────────────────────────────────────────────── -->
-<main id="tab-panels" class="container"></main>
-
-<!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
-<footer class="footer">
-    <span>Promotores de la Paz · SEDESOC 2026 · Gobierno de Corregidora</span>
-</footer>
-
-<!-- ── SCRIPTS ──────────────────────────────────────────────────────────── -->
-<script src="js/config.js"></script>
-<script src="js/cargarDatos.js"></script>
-<script src="js/filtros.js"></script>
-<script src="js/tabs.js"></script>
-<script src="js/kpis.js"></script>
-<script src="js/graficaGlobal.js"></script>
-<script src="js/graficaIndividual.js"></script>
-<script src="js/ciudadanos.js"></script>
-<script src="js/loader.js"></script>
+    <!-- ── SCRIPTS ──────────────────────────────────────────────────────────── -->
+    <script src="js/config.js"></script>
+    <script src="js/cargarDatos.js"></script>
+    <script src="js/filtros.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/kpis.js"></script>
+    <script src="js/graficaGlobal.js"></script>
+    <script src="js/graficaIndividual.js"></script>
+    <script src="js/ciudadanos.js"></script>
+    <script src="js/loader.js"></script>
 
 </body>
+
 </html>
