@@ -70,7 +70,6 @@ function activarSeccion(seccionId) {
     }
 
     setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
         const activeSection = document.getElementById('tab-' + seccionId);
         if (activeSection && window.Plotly) {
             activeSection.querySelectorAll('.js-plotly-plot').forEach(gd => {

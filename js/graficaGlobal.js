@@ -70,11 +70,10 @@ function renderGlobal() {
             marker: { colors: ['#7bc11d', '#ef4444'], line: { color: 'transparent', width: 0 } },
             textinfo: 'label+percent',
             textposition: 'outside',
-            automargin: true,
             pull: [0.03, 0],
         }], getLayout('Asistencia Global', {
             showlegend: false,
-            margin: { t: 52, r: 14, b: 14, l: 14 },
+            margin: { t: 52, r: 60, b: 40, l: 60 },
             annotations: [{
                 text: `<b>${resumen.total_invitados?.toLocaleString('es-MX') || '—'}</b><br><span style="font-size:10px">Invitados</span>`,
                 x: 0.5, y: 0.5, showarrow: false,
@@ -380,11 +379,10 @@ function renderGlobal() {
             marker: { colors: ['#7bc11d', '#f59e0b'], line: { color: 'transparent', width: 0 } },
             textinfo: 'label+value+percent',
             textposition: 'outside',
-            automargin: true,
             direction: 'clockwise',
         }], getLayout('Estado de Líderes — Cumplieron vs Bajaron', {
             showlegend: false,
-            margin: { t: 52, r: 18, b: 18, l: 18 },
+            margin: { t: 52, r: 60, b: 40, l: 60 },
         }));
     }
 }

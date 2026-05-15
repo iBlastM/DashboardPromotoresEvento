@@ -93,11 +93,10 @@ function renderIndividual() {
             marker: { colors: ['#7bc11d', '#ef4444'], line: { color: 'transparent', width: 0 } },
             textinfo: 'label+percent',
             textposition: 'outside',
-            automargin: true,
             pull: [0.03, 0],
         }], getLayout(`Asistencia — ${lider.nombre}`, {
             showlegend: false,
-            margin: { t: 52, r: 14, b: 14, l: 14 },
+            margin: { t: 52, r: 60, b: 40, l: 60 },
             annotations: [{
                 text: `<b>${lider.invitados}</b><br><span style="font-size:10px">Invitados</span>`,
                 x: 0.5, y: 0.5, showarrow: false,
